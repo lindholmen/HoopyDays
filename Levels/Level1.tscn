@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 320.122, 316.436 )
+
+[node name="Level1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 504.479, 170.208 )
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2( 515.612, 743.735 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorSprite" type="Sprite" parent="Floor"]
+position = Vector2( 0, -0.788 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+visible = false
+shape = SubResource( 1 )
+one_way_collision_margin = 0.0
+
+[node name="Floor2" type="StaticBody2D" parent="."]
+position = Vector2( 1143.69, 855.977 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorSprite" type="Sprite" parent="Floor2"]
+position = Vector2( 0, -0.788 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
+visible = false
+shape = SubResource( 1 )
+one_way_collision_margin = 0.0
+
+[node name="Floor3" type="StaticBody2D" parent="."]
+position = Vector2( -114.855, 961.055 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorSprite" type="Sprite" parent="Floor3"]
+position = Vector2( 0, -0.788 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor3"]
+visible = false
+shape = SubResource( 1 )
+one_way_collision_margin = 0.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 514.278, 304.164 )
+current = true
+zoom = Vector2( 2, 2 )
