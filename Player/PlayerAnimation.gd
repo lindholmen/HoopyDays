@@ -11,4 +11,4 @@ func _on_Player_animate(motion):
 		flip_h = false
 		play("walk")
 	else:
-		play("idle")
+		 play("idle")
