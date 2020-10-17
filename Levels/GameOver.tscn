@@ -1,0 +1,89 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GFX/Background/bg_layer1.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/candles_.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Levels/GameOver.gd" type="Script" id=3]
+[ext_resource path="res://GFX/HUD/lifes.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 2 )
+
+[node name="GameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_left = 0.00117695
+anchor_top = 0.00200867
+anchor_right = 1.00118
+anchor_bottom = 1.00201
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 150.0
+margin_top = 175.0
+margin_right = 874.0
+margin_bottom = 425.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 724.0
+margin_bottom = 164.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.152941, 0.478431, 0.341176, 1 )
+text = "Game Over"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 168.0
+margin_right = 724.0
+margin_bottom = 250.0
+alignment = 1
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 39.0
+margin_right = 217.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.301961, 0.643137, 0.447059, 1 )
+text = "Click "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestartButton" type="TextureButton" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 221.0
+margin_right = 273.0
+margin_bottom = 82.0
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 277.0
+margin_right = 685.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.301961, 0.643137, 0.447059, 1 )
+text = " to try again"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
