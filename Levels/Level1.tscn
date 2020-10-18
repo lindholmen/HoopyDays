@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://Fonts/candles_.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Hazards/SpikeTop.tscn" type="PackedScene" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -17,7 +18,7 @@ position = Vector2( 504.479, 170.208 )
 tile_set = ExtResource( 2 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( -458668, 6, 0, -196601, 0, 0, -196584, 1, 0, -196545, 2, 0, -65487, 5, 0, 0, 1, 0, 32, 4, 0, 93, 7, 0, 131088, 0, 0, 131146, 2, 0, 262185, 3, 0, 327733, 0, 0, 393216, 0, 0, 393238, 0, 0, 589837, 0, 0, 589912, 7, 0, 655386, 0, 0, 655396, 3, 0, 655424, 1, 0, 851974, 0, 0, 852019, 0, 0, 1114117, 2, 0, 1114124, 2, 0, 1114139, 2, 0, 1114153, 4, 0, 1114193, 4, 0, 1179717, 1, 0, 1245204, 2, 0, 1376313, 2, 0, 1638494, 3, 0, 1769544, 2, 0 )
+tile_data = PoolIntArray( -1245074, 4, 0, -786313, 6, 0, -458668, 6, 0, -327553, 2, 0, -196601, 0, 0, -196584, 1, 0, -196545, 2, 0, -196507, 2, 0, -65487, 5, 0, 0, 1, 0, 32, 4, 0, 93, 7, 0, 131088, 0, 0, 131146, 2, 0, 131205, 4, 0, 262185, 3, 0, 262261, 5, 0, 327733, 0, 0, 393216, 0, 0, 393238, 0, 0, 589837, 0, 0, 589912, 7, 0, 589951, 1, 0, 655386, 0, 0, 655396, 3, 0, 655424, 1, 0, 721002, 2, 0, 851974, 0, 0, 852019, 0, 0, 1114117, 2, 0, 1114124, 2, 0, 1114139, 2, 0, 1114153, 4, 0, 1114193, 4, 0, 1114244, 2, 0, 1179717, 1, 0, 1245204, 2, 0, 1310820, 0, 0, 1376313, 2, 0, 1572986, 4, 0, 1638494, 3, 0, 1769544, 2, 0, 1900657, 7, 0 )
 
 [node name="LabelTest" type="Label" parent="."]
 margin_left = 503.0
@@ -30,3 +31,44 @@ text = "Test"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Hazards" type="Node" parent="."]
+
+[node name="SpikeTop" parent="Hazards" instance=ExtResource( 4 )]
+position = Vector2( 923.671, 1072.54 )
+
+[node name="SpikeTop2" parent="Hazards" instance=ExtResource( 4 )]
+position = Vector2( 994.623, 543.946 )
+
+[node name="SpikeTop3" parent="Hazards" instance=ExtResource( 4 )]
+position = Vector2( 1331.64, 104.044 )
+
+[node name="SpikeTop4" parent="Hazards" instance=ExtResource( 4 )]
+position = Vector2( 2227.41, -28.991 )
+
+[node name="SpikeTop5" parent="Hazards" instance=ExtResource( 4 )]
+position = Vector2( 2802.12, 1061.9 )
+
+[node name="SpikeTop6" parent="Hazards" instance=ExtResource( 4 )]
+position = Vector2( 3577.27, 300.936 )
+
+[node name="SpikeTop13" parent="Hazards" instance=ExtResource( 4 )]
+position = Vector2( 3470.26, 300.584 )
+
+[node name="SpikeTop7" parent="Hazards" instance=ExtResource( 4 )]
+position = Vector2( 4520.94, 1127.53 )
+
+[node name="SpikeTop8" parent="Hazards" instance=ExtResource( 4 )]
+position = Vector2( 5070.81, 102.27 )
+
+[node name="SpikeTop10" parent="Hazards" instance=ExtResource( 4 )]
+position = Vector2( 7014.9, 684.076 )
+
+[node name="SpikeTop11" parent="Hazards" instance=ExtResource( 4 )]
+position = Vector2( 8116.43, 1517.34 )
+
+[node name="SpikeTop12" parent="Hazards" instance=ExtResource( 4 )]
+position = Vector2( 7812.64, -778.29 )
+
+[node name="SpikeTop9" parent="Hazards" instance=ExtResource( 4 )]
+position = Vector2( 6644.17, -208.145 )
